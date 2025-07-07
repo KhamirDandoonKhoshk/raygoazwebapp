@@ -1,0 +1,32 @@
+{
+  "log": {
+    "loglevel": "warning"
+    },
+  "inbound": {
+    "port": "env:HTTP_PLATFORM_PORT",
+    "listen": "0.0.0.0",
+    "protocol": "vmess",
+    "settings": {
+    "clients": [
+          {
+          "id": "63843038-3b6d-4a40-d795-0cc351701fc6",
+          "level": 1,
+          "alterId": 64
+          }
+       ]
+    },
+    "streamSettings": {
+        "network": "ws"
+        }
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {},
+        "tag": "direct"
+        },
+    "policy": {
+    "levels": {
+        "0": {"uplinkOnly": 0}
+        }
+    }
+}
